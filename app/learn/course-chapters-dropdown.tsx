@@ -41,7 +41,7 @@ export default function CourseChaptersDropdown() {
     }, [])
 
     return (
-        <div className="fixed top-8 left-0 right-0 z-50 mx-8" ref={dropdownRef}>
+        <div className="sticky top-20 left-0 right-0 z-50 mx-8" ref={dropdownRef}>
             <div className="bg-gray-900 text-gray-100 p-4 rounded-lg shadow-lg">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">

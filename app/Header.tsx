@@ -1,18 +1,15 @@
 import NavHeader from "@/components/nav-header"
-import { SheetTrigger, SheetContent } from "@/components/ui/sheet"
-import { Sheet } from "lucide-react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { FaBars } from "react-icons/fa6";
-import { Dialog } from "@/components/ui/dialog"
+import LoginButton from "@/components/login-button"
+import { Session } from "next-auth"
 
-export default function HomePageHero() {
+export default function Header({ session }: { session: Session | null }) {
   const navLinks = [
     {
       _key: 1,
-      path: '/',
+      path: '/learn',
       sideOnly: false,
-      title: 'Home'
+      title: 'Learn'
     }
   ]
 
@@ -43,6 +40,7 @@ export default function HomePageHero() {
               </nav>
             </SheetContent>
           </Sheet> */}
+          <LoginButton session={session} />
         </div>
       </div>
     </header>

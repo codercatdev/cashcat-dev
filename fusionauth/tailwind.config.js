@@ -26,7 +26,6 @@ module.exports = {
       {
         business: {
           ...require("daisyui/src/theming/themes")["business"],
-          'primary': '#c891f2'
         }
       }
     ],

@@ -91,7 +91,7 @@
 
         <div class="mt-4 flex justify-between items-center">
           [#if showPasswordField]
-            [@helpers.button color="btn-primary" icon="key" text=theme.message('submit')/]
+            [@helpers.button color="btn-neutral" icon="key" text=theme.message('submit')/]
             [@helpers.link url="${request.contextPath}/password/forgot"]${theme.message('forgot-your-password')}[/@helpers.link]
           [#else]
             [@helpers.button icon="arrow-right" text=theme.message('next')/]
@@ -112,7 +112,7 @@
           ${theme.message('dont-have-an-account')}
         </div>
 
-        [@helpers.linkButton url="${request.contextPath}/oauth2/register" color="btn-primary"]${theme.message('create-an-account')}[/@helpers.linkButton]
+        [@helpers.linkButton url="${request.contextPath}/oauth2/register" color="btn-neutral"]${theme.message('create-an-account')}[/@helpers.linkButton]
       [/#if]
 
      [#if showWebAuthnReauthLink]

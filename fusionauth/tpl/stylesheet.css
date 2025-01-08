@@ -663,7 +663,7 @@ html {
     --b2: 22.6487% 0 0;
     --b3: 20.944% 0 0;
     --bc: 84.8707% 0 0;
-    --pc: 14.915% 0.029276 309.312936;
+    --pc: 88.3407% 0.019811 251.473931;
     --sc: 12.8185% 0.005481 229.389418;
     --ac: 13.4542% 0.033545 35.791525;
     --nc: 85.4882% 0.00265 253.041249;
@@ -677,7 +677,7 @@ html {
     --border-btn: 1px;
     --tab-border: 1px;
     --tab-radius: 0.5rem;
-    --p: 74.575% 0.146379 309.312936;
+    --p: 41.7036% 0.099057 251.473931;
     --s: 64.0924% 0.027405 229.389418;
     --a: 67.271% 0.167726 35.791525;
     --n: 27.441% 0.01325 253.041249;
@@ -730,7 +730,7 @@ html {
   --b2: 22.6487% 0 0;
   --b3: 20.944% 0 0;
   --bc: 84.8707% 0 0;
-  --pc: 14.915% 0.029276 309.312936;
+  --pc: 88.3407% 0.019811 251.473931;
   --sc: 12.8185% 0.005481 229.389418;
   --ac: 13.4542% 0.033545 35.791525;
   --nc: 85.4882% 0.00265 253.041249;
@@ -744,7 +744,7 @@ html {
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --p: 74.575% 0.146379 309.312936;
+  --p: 41.7036% 0.099057 251.473931;
   --s: 64.0924% 0.027405 229.389418;
   --a: 67.271% 0.167726 35.791525;
   --n: 27.441% 0.01325 253.041249;
@@ -1116,6 +1116,18 @@ html {
     }
   }
 
+  .btn-outline.btn-secondary:hover {
+    --tw-text-opacity: 1;
+    color: var(--fallback-sc,oklch(var(--sc)/var(--tw-text-opacity)));
+  }
+
+  @supports (color: color-mix(in oklab, black, black)) {
+    .btn-outline.btn-secondary:hover {
+      background-color: color-mix(in oklab, var(--fallback-s,oklch(var(--s)/1)) 90%, black);
+      border-color: color-mix(in oklab, var(--fallback-s,oklch(var(--s)/1)) 90%, black);
+    }
+  }
+
   .btn-disabled:hover,
     .btn[disabled]:hover,
     .btn:disabled:hover {
@@ -1448,12 +1460,25 @@ html {
   .btn-primary {
     --btn-color: var(--fallback-p);
   }
+
+  .btn-secondary {
+    --btn-color: var(--fallback-s);
+  }
+
+  .btn-neutral {
+    --btn-color: var(--fallback-n);
+  }
 }
 
 @supports (color: color-mix(in oklab, black, black)) {
   .btn-outline.btn-primary.btn-active {
     background-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
     border-color: color-mix(in oklab, var(--fallback-p,oklch(var(--p)/1)) 90%, black);
+  }
+
+  .btn-outline.btn-secondary.btn-active {
+    background-color: color-mix(in oklab, var(--fallback-s,oklch(var(--s)/1)) 90%, black);
+    border-color: color-mix(in oklab, var(--fallback-s,oklch(var(--s)/1)) 90%, black);
   }
 }
 
@@ -1473,6 +1498,26 @@ html {
   .btn-primary {
     --btn-color: var(--p);
   }
+
+  .btn-secondary {
+    --btn-color: var(--s);
+  }
+
+  .btn-neutral {
+    --btn-color: var(--n);
+  }
+}
+
+.btn-secondary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-sc,oklch(var(--sc)/var(--tw-text-opacity)));
+  outline-color: var(--fallback-s,oklch(var(--s)/1));
+}
+
+.btn-neutral {
+  --tw-text-opacity: 1;
+  color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
+  outline-color: var(--fallback-n,oklch(var(--n)/1));
 }
 
 .btn.glass {
@@ -1495,6 +1540,16 @@ html {
 .btn-outline.btn-primary.btn-active {
   --tw-text-opacity: 1;
   color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
+
+.btn-outline.btn-secondary {
+  --tw-text-opacity: 1;
+  color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
+}
+
+.btn-outline.btn-secondary.btn-active {
+  --tw-text-opacity: 1;
+  color: var(--fallback-sc,oklch(var(--sc)/var(--tw-text-opacity)));
 }
 
 .btn.btn-disabled,

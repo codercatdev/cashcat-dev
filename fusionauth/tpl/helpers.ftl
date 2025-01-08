@@ -135,7 +135,7 @@
 [/#macro]
 
 [#macro header]
-  <div class="navbar bg-base-100 justify-end pr-4">
+  [#--  <div class="navbar bg-base-100 justify-end pr-4">
     <div class="flex-none">
       [#if request.requestURI == "/"]
         <a href="${request.contextPath}/admin/" title="Administrative login"><i class="fa fa-lock" style="font-size: 18px;"></i></a>
@@ -144,6 +144,13 @@
       [#else]
         <a target="_blank" href="https://fusionauth.io/docs/"><i class="fa fa-question-circle-o"></i> ${theme.message("help")}</a>
       [/#if]
+    </div>
+  </div>  --]
+  <div class="navbar bg-base-100 justify-end pr-4">
+    <div class="flex-none">
+    <a href="https://cashcat.dev" class="btn btn-neutral">
+      <i class="fa fa-arrow-left"></i> CashCat.dev
+    </a>
     </div>
   </div>
 
@@ -323,7 +330,7 @@
 
   [#-- Powered by FusionAuth branding. This backlink helps FusionAuth web ranking so more
        people can find us! However, we always want to give the developer choice, remove this if you like. --]
-  <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+  [#--<footer class="footer footer-center p-4 bg-base-300 text-base-content">
     <div class="flex">
       <p class="whitespace-nowrap">Powered by</p>
         <a href="https://fusionauth.io" title="The best developer IAM in the universe!">
@@ -334,7 +341,7 @@
           </picture>
         </a>
     </div>
-  </footer>
+  </footer>--]
 [/#macro]
 
 [#-- Below are the social login buttons and helpers --]

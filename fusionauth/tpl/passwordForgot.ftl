@@ -28,7 +28,7 @@
           [@helpers.captchaBadge showCaptcha=showCaptcha captchaMethod=tenant.captchaConfiguration.captchaMethod siteKey=tenant.captchaConfiguration.siteKey/]
         </fieldset>
         <div class="mt-4">
-          [@helpers.button color="btn-primary" text=theme.message('submit')/]
+          [@helpers.button color="btn-neutral" text=theme.message('submit')/]
           <p class="mt-2">[@helpers.link url="/oauth2/authorize"]${theme.message('return-to-login')}[/@helpers.link]</p>
         </div>
       </form>

@@ -159,7 +159,7 @@
         </fieldset>
 
         <div class="mt-4">
-          [@helpers.button color="btn-primary" icon="key" text=theme.message('register')/]
+          [@helpers.button color="btn-neutral" icon="key" text=theme.message('register')/]
           <p class="mt-2">[@helpers.link url="/oauth2/authorize"]${theme.message('return-to-login')}[/@helpers.link]</p>
         </div>
         [/#if]

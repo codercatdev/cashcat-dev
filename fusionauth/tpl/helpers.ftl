@@ -128,8 +128,10 @@
 
 [#macro body]
 <body class="app-sidebar-closed h-full">
-  <div class="min-h-full bg-base-200 flex flex-col">
-    [#nested/]
+  <div class="min-h-full bg-base-200 flex flex-col bg-gradient-to-r from-orange-500 to-neutral">
+    <div class="container mx-auto p-4 max-w-screen-5xl">
+      [#nested/]
+    </div>
   </div>
 </body>
 [/#macro]
@@ -146,7 +148,7 @@
       [/#if]
     </div>
   </div>  --]
-  <div class="navbar bg-base-100 justify-end pr-4">
+  <div class="navbar justify-start pl-4">
     <div class="flex-none">
     <a href="https://cashcat.dev" class="btn btn-neutral">
       <i class="fa fa-arrow-left"></i> CashCat.dev
@@ -183,23 +185,32 @@
 [/#macro]
 
 [#macro main title="Login" rowClass="row center-xs" colClass="col-xs col-sm-8 col-md-6 col-lg-5 col-xl-4"]
-<main class="grow">
-  <div class="mt-16">
-    [@printErrorAlerts rowClass colClass/]
-    [@printInfoAlerts rowClass colClass/]
-
-    <div class="card w-96 bg-base-100 shadow-xl mx-auto">
-      <div class="card-body">
-        [#if title?has_content]
-          <h2 class="card-title">${title}</h2>
-        [/#if]
-
-        [#nested/]
-      </div>
+<main class="grow flex flex-col lg:flex-row py-4 lg:py-8">
+  <div class="hidden lg:block lg:w-1/2 lg:ml-4">
+    <!-- Add your side content here for lg screens -->
+    <div class="flex justify-center items-center h-full p-4">
+      <img src="https://res.cloudinary.com/djox1exln/image/upload/v1736365706/cashcat_ugl2fn.png" alt="hero" class="w-full h-auto max-w-full max-h-full" loading="lazy" width="1024" height="1024" />
     </div>
+  </div>
+  <div class="lg:w-1/2">
+    <div class="flex justify-center items-center h-full p-4">
+      [@printErrorAlerts rowClass colClass/]
+      [@printInfoAlerts rowClass colClass/]
 
-    <div class="mt-4 w-96 mx-auto">
-      [@localSelector/]
+      <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+        <div class="card-body">
+          [#if title?has_content]
+            <h2 class="card-title">${title}</h2>
+          [/#if]
+
+          [#nested/]
+        </div>
+      </div>
+[#--
+      <div class="mt-4 w-96 mx-auto">
+        [@localSelector/]
+      </div>
+      --]
     </div>
   </div>
 </main>

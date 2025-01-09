@@ -590,9 +590,9 @@
 </button>
 [/#macro]
 
-[#macro alternativeLogins clientId identityProviders passwordlessEnabled bootstrapWebauthnEnabled=false]
+[#macro alternativeLogins clientId identityProviders passwordlessEnabled bootstrapWebauthnEnabled=false idpRedirectState="" federatedCSRFToken=""]
   [#if identityProviders?has_content || passwordlessEnabled || bootstrapWebauthnEnabled]
-    <div class="login-button-container">
+    <div class="login-button-container" id="login-button-container" data-federated-csrf="${federatedCSRFToken}">
       <div class="hr-container">
         <hr>
         <div>${theme.message('or')}</div>

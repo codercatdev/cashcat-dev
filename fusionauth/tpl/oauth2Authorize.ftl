@@ -118,7 +118,7 @@
      [#if showWebAuthnReauthLink]
        [@helpers.link url="${request.contextPath}/oauth2/webauthn-reauth"] ${theme.message('return-to-webauthn-reauth')} [/@helpers.link]
      [/#if]
-      [@helpers.alternativeLogins clientId=client_id identityProviders=identityProviders passwordlessEnabled=passwordlessEnabled bootstrapWebauthnEnabled=bootstrapWebauthnEnabled/]
+      [@helpers.alternativeLogins clientId=client_id identityProviders=identityProviders passwordlessEnabled=passwordlessEnabled bootstrapWebauthnEnabled=bootstrapWebauthnEnabled federatedCSRFToken=federatedCSRFToken/]
     [/@helpers.main]
 
     [@helpers.footer]
